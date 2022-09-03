@@ -8,9 +8,9 @@ const DiscussionBoard = (props) => {
         <li className={discussion.numberOfNewMessages > 0 ? 'discussion has-new-message' : 'discussion'}
             key={discussion.discussionTitle} style={{ backgroundColor: discussion.backgroundColor }}>
           <p className="discussion-title">
-            <svg className="circle-bullet" width="10" height="10" viewBox="0 0 10 10" fill="none"
-                 xmlns="http://www.w3.org/2000/svg">
-              <circle cx="5" cy="5" r="5" fill={discussion.numberOfNewMessages > 0 ? discussion.color : 'transparent'}/>
+            <svg className="circle-bullet" width="10" height="10" viewBox="0 0 10 10" fill={discussion.numberOfNewMessages > 0 ? discussion.color : 'transparent'}
+                 xmlns="http://www.w3.org/2000/svg" >
+              <circle cx="5" cy="5" r="5"/>
             </svg>
             <a href={discussion.url} title={discussion.discussionTitle}>{discussion.discussionTitle}</a>
           </p>
