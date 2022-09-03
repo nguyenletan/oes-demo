@@ -1,0 +1,437 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        color-scheme: dark;
+    }
+
+    body {
+        color: white;
+        background: black;
+    }
+}
+
+
+/* Slider */
+
+.progress-dashboard {
+    width: 100%;
+    padding: 35px;
+}
+
+/* TimeLine */
+
+.timeline {
+    min-height: 145px;
+    border: 1px solid rgba(39, 39, 39, 0.5);
+    border-radius: 5px;
+    width: 100%;
+    padding: 19px 21px;
+}
+
+.timeline .title {
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: uppercase;
+    margin-bottom: 27px;
+}
+
+.timeline .timeline-title {
+    font-weight: 600;
+    padding-right: 0.6em;
+}
+
+.timeline .current-week {
+    font-weight: 600;
+}
+
+.slider progress {
+    overflow: hidden;
+    inline-size: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    block-size: 7px;
+
+}
+
+.slider progress::-webkit-progress-value {
+    background: #57B598;
+    border-radius: 5px;
+}
+
+.slider progress::-webkit-progress-bar {
+    background-color: #E3E4E4;
+    border-radius: 5px;
+}
+
+.slider .labels {
+    margin-top: 13px;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding-inline-start: 0;
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.slider .labels li, .slider .pins li {
+    width: 100%;
+    text-align: right;
+}
+
+.slider .pins li {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.slider .pins li .pin-group {
+    display: flex;
+}
+
+.slider .pins li .pin-group .pin {
+    margin-left: -10px;
+}
+
+.slider .pins li .pin-group .pin:nth-child(1) {
+    z-index: 4;
+    margin-left: 0;
+}
+
+.slider .pins li .pin-group .pin:nth-child(2) {
+    z-index: 3;
+}
+
+.slider .pins li .pin-group .pin:nth-child(3) {
+    z-index: 2;
+}
+
+.slider .pins li .pin-group .pin:nth-child(4) {
+}
+
+.slider .pins {
+    margin-top: 0;
+    margin-bottom: -10px;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+/* Unit */
+/*.units {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    list-style: none;*/
+/*    padding-inline-start: 0;*/
+/*    margin-top: 20px;*/
+/*    flex-wrap: wrap;*/
+/*    column-gap: 20px;*/
+/*    row-gap: 20px;*/
+/*}*/
+
+.units {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    list-style: none;
+    padding-inline-start: 0;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.units {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    list-style: none;
+    padding-inline-start: 0;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.unit {
+    /*//width: min-content;*/
+    /*min-width: max(23.5%, 281px);*/
+    min-height: 228px;
+    border: 1px solid rgba(39, 39, 39, 0.5);
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+.unit .unit-code {
+    font-size: 13px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: #5C5C5C;
+    margin: 0;
+}
+
+.unit .unit-name {
+    line-height: 20px;
+    margin: 0;
+    padding-top: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #272727;
+    min-height: 3.2em;
+}
+
+.unit .modules-title {
+    font-size: 13px;
+    line-height: 17px;
+    font-weight: 600;
+    margin-top: 22px;
+    margin-bottom: 10px;
+}
+
+
+.unit .progress-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 7px;
+}
+
+.unit progress {
+    overflow: hidden;
+    inline-size: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    block-size: 7px;
+    margin-top: 5px;
+}
+
+.unit .progress-value {
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.unit progress::-webkit-progress-value {
+    background: #57B598;
+    border-radius: 5px;
+}
+
+.unit progress::-webkit-progress-bar {
+    background-color: #E3E4E4;
+    border-radius: 5px;
+}
+
+.unit .assignment-title {
+    font-size: 13px;
+    line-height: 17px;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.unit .assignment-progress {
+    display: flex;
+    column-gap: 2px;
+    width: 100%;
+}
+
+.unit .assignment-progress span {
+    display: flex;
+    background-color: #E3E4E4;
+    color: #565656;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 14px;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+.unit .assignment-progress span.submitted {
+    background-color: #696969;
+    color: #fff;
+}
+
+
+.upcoming-discussion {
+    display: grid;
+    grid-template-columns: minmax(508px, 43%) minmax(646px, 57%);
+    gap: 20px;
+}
+
+.upcoming-assignments {
+    border: 1px solid rgba(39, 39, 39, 0.5);
+    border-radius: 5px;
+    padding: 17px 22px 20px 22px;
+}
+
+.upcoming-assignments a:hover {
+    text-decoration: underline;
+}
+
+.upcoming-assignments .title{
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    margin: 0;
+}
+
+.upcoming-assignments .assignments {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.upcoming-assignments .vertical-line{
+    width: 4px;
+    height: auto;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+
+.upcoming-assignments .assignment{
+    display: flex;
+    border-width: 0;
+    border-radius: 5px;
+    min-height: 80px;
+    padding: 10px 10px 10px 14px;
+}
+
+.upcoming-assignments .assignment .content {
+    position: relative;
+    width: 100%;
+}
+
+
+.upcoming-assignments .assignment .status {
+    position: absolute;
+    right: 0;
+    top: 6px;
+    padding: 6px 15px;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 14px;
+    text-transform: uppercase;
+    margin: 0;
+    background-color: #EA4F4F;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.upcoming-assignments .assignment .assignment-unit {
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #4D4D4D;
+}
+
+.upcoming-assignments .assignment .assignment-title {
+    font-size: 14px;
+    line-height: 19px;
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.upcoming-assignments .assignment .due-date{
+    font-size: 10px;
+    line-height: 14px;
+    margin: 0;
+    font-weight: 700;
+    color: #2F2F2F
+}
+
+
+/* DISCUSSION BOARDS ACTIVITY */
+.discussion-board {
+    border: 1px solid rgba(39, 39, 39, 0.5);
+    border-radius: 5px;
+    padding: 17px 21px 22px 21px;
+}
+
+.discussion-board .title {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    margin: 0;
+}
+
+.discussion-board .discussions {
+    list-style: none;
+    row-gap: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+.discussion-board .discussions .discussion {
+    border-radius: 5px;
+    padding: 13px 12px 13px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.discussion-board .discussions .discussion .discussion-title{
+    font-size: 14px;
+    line-height: 19px;
+    margin: 0;
+}
+
+.discussion-board .discussions .discussion .discussion-title .circle-bullet{
+    margin-right: 9px;
+}
+
+.discussion-board .discussions .discussion .discussion-title:hover {
+    text-decoration: underline;
+}
+
+.discussion-board .discussions .discussion.has-new-message .discussion-title {
+    font-weight: 600;
+}
+
+.discussion-board .discussions .number-message {
+    margin: 0;
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 700;
+    display: flex;
+    height: 20px;
+
+}
+
+.discussion-board .discussions .number-message .new-message {
+    border-radius: 50px 0 0 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 31px;
+    color: #fff;
+}
+
+
+.discussion-board .discussions .number-message .message {
+    border-radius: 0 50px 50px 0;
+    justify-content: center;
+    align-items: center;
+    min-width: 31px;
+    background-color: #fff;
+    display: flex;
+}
