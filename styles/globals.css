@@ -267,7 +267,7 @@ a {
 
 .upcoming-discussion {
     display: grid;
-    grid-template-columns: minmax(508px, 43%) minmax(646px, 57%);
+    grid-template-columns: minmax(min-content, 43%) minmax(min-content, 57%);
     gap: 20px;
 }
 
@@ -339,6 +339,7 @@ a {
     margin-top: 0;
     margin-bottom: 5px;
     color: #4D4D4D;
+    max-width: 79%;
 }
 
 .upcoming-assignments .assignment .assignment-title {
@@ -347,6 +348,7 @@ a {
     margin-top: 0;
     margin-bottom: 5px;
     font-weight: 600;
+    max-width: 77%;
 }
 
 .upcoming-assignments .assignment .due-date{
@@ -393,6 +395,8 @@ a {
     font-size: 14px;
     line-height: 19px;
     margin: 0;
+    display: flex;
+    align-items: center;
 }
 
 .discussion-board .discussions .discussion .discussion-title .circle-bullet{
